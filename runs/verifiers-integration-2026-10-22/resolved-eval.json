@@ -1,0 +1,137 @@
+{
+  "env": {
+    "taskset": {
+      "task": {
+        "judges": [],
+        "stops": {},
+        "metrics": {},
+        "rewards": {},
+        "reward_key": "reward",
+        "mcp_servers": []
+      },
+      "system_prompt": null,
+      "id": "csi-label-selection",
+      "tasks_dir": "verifiers_tasks/eval",
+      "split": "eval"
+    },
+    "timeout": {
+      "episode": null,
+      "finalize": null
+    },
+    "retries": {
+      "max_retries": 0,
+      "rules": []
+    },
+    "max_concurrent_agents": 1,
+    "interception": {
+      "type": "elastic",
+      "multiplex": 32
+    },
+    "id": "",
+    "agent": {
+      "harness": {
+        "id": "bash",
+        "env": {},
+        "forward_env": [],
+        "mcp_header_env": {},
+        "tool_timeout": 600.0,
+        "disabled_tools": null,
+        "dialect": "chat_completions",
+        "skills": [],
+        "edit": true,
+        "search": false,
+        "compaction": {
+          "summarize_at_tokens": null
+        }
+      },
+      "runtime": {
+        "allow": [
+          "*"
+        ],
+        "block": [],
+        "type": "docker",
+        "image": "python:3.11-slim",
+        "workdir": null,
+        "cpu": null,
+        "memory": null,
+        "gpu": null,
+        "disk": null
+      },
+      "scoring": {},
+      "deployment": {
+        "mode": "colocated",
+        "trust_compose": true
+      },
+      "model": null,
+      "client": null,
+      "sampling": null,
+      "max_turns": null,
+      "max_input_tokens": null,
+      "max_output_tokens": null,
+      "max_total_tokens": null,
+      "max_turn_tokens": null,
+      "timeout": {
+        "setup": null,
+        "rollout": null,
+        "finalize": null,
+        "scoring": null
+      },
+      "retries": {
+        "max_retries": 0,
+        "rules": []
+      },
+      "network_notice": true
+    }
+  },
+  "run": {
+    "name": "csi-label-selection--local-policy--bash--51a69e9b",
+    "dir": "csi-label-selection--local-policy--bash--51a69e9b",
+    "attach": null
+  },
+  "model": "local-policy",
+  "client": {
+    "base_url": "http://127.0.0.1:8000/v1",
+    "api_key_var": "CSI_LOCAL_MODEL_KEY",
+    "headers": {},
+    "headers_from_env": {},
+    "timeout": {
+      "connect": 30.0,
+      "read": null,
+      "write": null,
+      "pool": null
+    },
+    "type": "eval"
+  },
+  "sampling": {
+    "temperature": null,
+    "top_p": null,
+    "reasoning_effort": null,
+    "max_tokens": null
+  },
+  "select": {
+    "include": {
+      "idx": [],
+      "ids": [],
+      "keys": [],
+      "names": []
+    },
+    "exclude": {
+      "idx": [],
+      "ids": [],
+      "keys": [],
+      "names": []
+    },
+    "shuffle": false,
+    "seed": 0,
+    "skip": 0,
+    "limit": null
+  },
+  "num_rollouts": 1,
+  "max_concurrent": 1,
+  "verbose": false,
+  "rich": {
+    "show_logs": false
+  },
+  "push": false,
+  "output_dir": "/private/tmp/csi-verifiers-build.75n0bp9q/config-check"
+}

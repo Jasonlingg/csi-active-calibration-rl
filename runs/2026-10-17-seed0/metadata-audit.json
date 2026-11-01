@@ -1,0 +1,29 @@
+{
+  "audit": "independent calibration label-mapping metadata parity",
+  "recorded_at_utc": "2026-10-17T05:16:01.883394+00:00",
+  "method": "Python standard-library csv parsing of the two listed metadata files; SHA-256 from hashlib",
+  "ordered_fields": [
+    "session_nr",
+    "activity_idx",
+    "rep_nr"
+  ],
+  "filter": "split == 'calibration'",
+  "manifest": {
+    "path": "/Users/jasonling/Documents/GitHub/terminal-bench/experiments/csi-har-oracle-audit/calibration_event_index.csv",
+    "sha256": "24e36f333bb6c28aed0531b48d240b43ac2bb3cc65f18d6766317948a00c8d49",
+    "calibration_rows": 120
+  },
+  "original_split": {
+    "path": "/Users/jasonling/Documents/tb3-csi-feasibility/har_event_split.csv",
+    "sha256": "899aa30736bd744d678699c3273863811d1178d0f17a8b83052ab10671cb9023",
+    "calibration_rows": 120
+  },
+  "ordered_calibration_rows_match": true,
+  "matched_row_count": 120,
+  "read_inputs": [
+    "/Users/jasonling/Documents/GitHub/terminal-bench/experiments/csi-har-oracle-audit/calibration_event_index.csv",
+    "/Users/jasonling/Documents/tb3-csi-feasibility/har_event_split.csv"
+  ],
+  "source_or_test_arrays_opened": false,
+  "training_or_evaluation_run": false
+}

@@ -1,0 +1,6 @@
+{
+  "reward": -1.0,
+  "valid": false,
+  "reason": "invalid history or replay: ValueError: history must contain exactly 16 actions",
+  "queries": 3
+}

@@ -1,0 +1,141 @@
+{
+  "env": {
+    "taskset": {
+      "task": {
+        "judges": [],
+        "stops": {},
+        "metrics": {},
+        "rewards": {},
+        "reward_key": "reward",
+        "mcp_servers": []
+      },
+      "system_prompt": null,
+      "id": "csi-label-selection",
+      "tasks_dir": "verifiers_tasks/train",
+      "split": "train"
+    },
+    "timeout": {
+      "episode": null,
+      "finalize": null
+    },
+    "retries": {
+      "max_retries": 0,
+      "rules": []
+    },
+    "max_concurrent_agents": 1,
+    "interception": {
+      "type": "elastic",
+      "multiplex": 32
+    },
+    "id": "",
+    "agent": {
+      "harness": {
+        "id": "bash",
+        "env": {},
+        "forward_env": [],
+        "mcp_header_env": {},
+        "tool_timeout": 600.0,
+        "disabled_tools": null,
+        "dialect": "chat_completions",
+        "skills": [],
+        "edit": false,
+        "search": false,
+        "compaction": {
+          "summarize_at_tokens": 16000
+        }
+      },
+      "runtime": {
+        "allow": [
+          "*"
+        ],
+        "block": [],
+        "type": "docker",
+        "image": "python:3.11-slim",
+        "workdir": null,
+        "cpu": null,
+        "memory": null,
+        "gpu": null,
+        "disk": null
+      },
+      "scoring": {
+        "retries": {
+          "max_retries": 0
+        }
+      },
+      "deployment": {
+        "mode": "colocated",
+        "trust_compose": true
+      },
+      "model": null,
+      "client": null,
+      "sampling": null,
+      "max_turns": 40,
+      "max_input_tokens": 512000,
+      "max_output_tokens": 8192,
+      "max_total_tokens": null,
+      "max_turn_tokens": 2048,
+      "timeout": {
+        "setup": 600.0,
+        "rollout": 600.0,
+        "finalize": 120.0,
+        "scoring": 120.0
+      },
+      "retries": {
+        "max_retries": 0,
+        "rules": []
+      },
+      "network_notice": true
+    }
+  },
+  "run": {
+    "name": "csi-label-selection--qwen--qwen3-8b--bash--c443ae94",
+    "dir": "csi-label-selection--qwen--qwen3-8b--bash--c443ae94",
+    "attach": null
+  },
+  "model": "Qwen/Qwen3-8B",
+  "client": {
+    "base_url": "http://127.0.0.1:18000/v1",
+    "api_key_var": "CSI_LOCAL_MODEL_KEY",
+    "headers": {},
+    "headers_from_env": {},
+    "timeout": {
+      "connect": 30.0,
+      "read": null,
+      "write": null,
+      "pool": null
+    },
+    "type": "eval"
+  },
+  "sampling": {
+    "temperature": 0.0,
+    "top_p": null,
+    "reasoning_effort": null,
+    "max_tokens": 2048
+  },
+  "select": {
+    "include": {
+      "idx": [],
+      "ids": [
+        "csi-train-A-seed0"
+      ],
+      "keys": [],
+      "names": []
+    },
+    "exclude": {
+      "idx": [],
+      "ids": [],
+      "keys": [],
+      "names": []
+    },
+    "shuffle": false,
+    "seed": 0,
+    "skip": 0,
+    "limit": 1
+  },
+  "num_rollouts": 1,
+  "max_concurrent": 1,
+  "verbose": false,
+  "rich": null,
+  "push": false,
+  "output_dir": "/Users/jasonling/Documents/GitHub/csi-active-calibration-rl/runs/llm-smoke-2026-10-26/native-compaction"
+}

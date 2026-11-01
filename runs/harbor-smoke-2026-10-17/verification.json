@@ -1,0 +1,59 @@
+{
+  "harbor_version": "0.24.0",
+  "container_engine": "Docker 29.2.1",
+  "task": "harbor_tasks/csi-active-calibration",
+  "task_build_manifest_sha256": "c9cbe60c9820bbedb433c5b51911e2b09009f2b4f778cf36744725d25a44b0d6",
+  "generated_file_hashes_verified": true,
+  "receiver": "F",
+  "split": "eval",
+  "seed": 0,
+  "budget": 16,
+  "checks": {
+    "smoke-reference-fixed": {
+      "trial_result": "harbor_runs/smoke-reference-fixed/csi-active-calibration__pfwLtxC/result.json",
+      "trial_result_sha256": "cb6b284205f25fc2ef49b1393b5e1f25c882d001c3e444a7ca07f829a19169df",
+      "report": {
+        "reward": 0.45833333333333337,
+        "valid": true,
+        "reason": "completed exactly 16 legal queries",
+        "queries": 16,
+        "initial_accuracy": 0.125,
+        "final_accuracy": 0.5833333333333334,
+        "accuracy_gain": 0.45833333333333337
+      },
+      "report_sha256": "c16f0b175959a43efa5ed57e0eed7511915adcebaf5e632262cac331cf4b48b8",
+      "model_calls": 0,
+      "trusted_sidecar_artifact_collected": true,
+      "exceptions": 0
+    },
+    "smoke-nop": {
+      "trial_result": "harbor_runs/smoke-nop/csi-active-calibration__CPsvowE/result.json",
+      "trial_result_sha256": "6d3434172c1e474dede1a88d479b76af16a8d84c12fc31accebf328743a39507",
+      "report": {
+        "reward": -1.0,
+        "valid": false,
+        "reason": "invalid history or replay: ValueError: history must contain exactly 16 actions",
+        "queries": 0
+      },
+      "report_sha256": "00efe5e8914e8d592adc0d73458a5e252487212a442ef03276eb8da51fe4c193",
+      "model_calls": 0,
+      "trusted_sidecar_artifact_collected": true,
+      "exceptions": 0
+    }
+  },
+  "first_packaging_failure_preserved": "harbor_runs/smoke-reference/",
+  "frontier_model_trials_started": false,
+  "published_or_submitted": false,
+  "reproduce": [
+    "python -m active_calibration.harbor_task --out /tmp/new-csi-harbor-task --receiver F --seed 0",
+    "harbor run -p /tmp/new-csi-harbor-task -a oracle --jobs-dir /absolute/path/to/new-harbor-runs --job-name reference --n-concurrent 1",
+    "harbor run -p /tmp/new-csi-harbor-task -a nop --jobs-dir /absolute/path/to/new-harbor-runs --job-name nop --n-concurrent 1"
+  ],
+  "python_validation": {
+    "command": "python -m pytest tests -q",
+    "passed": 39,
+    "failed": 0,
+    "warnings": "Two existing Gymnasium warnings for unbounded score observations",
+    "includes_generated_reference_execution": true
+  }
+}

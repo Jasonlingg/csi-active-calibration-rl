@@ -1,0 +1,85 @@
+{
+  "date": "2026-10-21",
+  "scope": "Scripted CSI task lifecycle and reward propagation through OpenEnv run_rollout; not an end-to-end LLM training check",
+  "task": {
+    "receiver": "F",
+    "split": "eval",
+    "seed": 0,
+    "budget": 16,
+    "snapshot": "task-snapshot",
+    "build_manifest_sha256": "c9cbe60c9820bbedb433c5b51911e2b09009f2b4f778cf36744725d25a44b0d6"
+  },
+  "sources": {
+    "OpenEnv": {
+      "commit": "c696fe24f754d40dfed5f93a0c3c0fbd53d08c6c",
+      "tracked_diff": "",
+      "status": ""
+    },
+    "harbor": {
+      "commit": "38b9be0164a910015a0be9a37ba6e8e78c562dfe",
+      "tracked_diff": "",
+      "status": ""
+    }
+  },
+  "runtime": {
+    "python": "3.13.5",
+    "openenv": "0.9.1.dev0",
+    "harbor": "0.24.0",
+    "docker": "29.2.1"
+  },
+  "cases": {
+    "oracle": {
+      "reward": 0.45833333333333337,
+      "queries": 16,
+      "private_journal_collected": true,
+      "separate_verifier": true,
+      "native_exception": null,
+      "model_calls": 0,
+      "session_cleaned_up": true,
+      "openenv_ok": false,
+      "capture_rejection": "[FATAL] no_turns: the intercept saw no model calls: the agent never reached it (wrong base URL, unresolved model, or auth rejected)",
+      "details": "oracle/summary.json"
+    },
+    "nop": {
+      "reward": -1.0,
+      "queries": 0,
+      "private_journal_collected": true,
+      "separate_verifier": true,
+      "native_exception": null,
+      "model_calls": 0,
+      "session_cleaned_up": true,
+      "openenv_ok": false,
+      "capture_rejection": "[FATAL] no_turns: the intercept saw no model calls: the agent never reached it (wrong base URL, unresolved model, or auth rejected)",
+      "details": "nop/summary.json"
+    }
+  },
+  "tests": {
+    "csi": {
+      "command": "/private/tmp/csi-active-calibration-rl-venv/bin/python -m pytest tests -q",
+      "passed": 47,
+      "failed": 0,
+      "warnings": 2
+    },
+    "openenv": {
+      "command": "PYTHONPATH=src:envs python -m pytest tests/envs/test_harbor_rollout_contract.py tests/envs/test_harbor_session_factory.py tests/envs/test_harbor_runner_lifecycle.py tests/envs/test_harbor_capture_validate.py -q",
+      "passed": 90,
+      "failed": 0,
+      "skipped": 1,
+      "skip_reason": "test_has_tool_call_sees_the_converted_calls requires trl.experimental.async_grpo.openenv_harness; TRL was not installed"
+    }
+  },
+  "conclusion": "No separate-verifier or sidecar artifact reward mismatch reproduced on this OpenEnv path. No new upstream bug established.",
+  "limits": [
+    "Oracle and nop are test-only runtime seams selecting unmodified Harbor built-in agents.",
+    "No capture proxy or model endpoint was started; intercept URL was loopback port 1.",
+    "Both captures are correctly unusable because there were no model calls.",
+    "Hosted OpenEnv transport, real token/logprob capture, TRL ingestion, model rollouts and learning are unvalidated.",
+    "One existing receiver-F evaluation episode; this does not measure model performance or generalization."
+  ],
+  "remaining_check_containers": [],
+  "llm_calls": 0,
+  "training_runs": 0,
+  "gpu_resources_created": 0,
+  "published_or_submitted": false,
+  "runtime_source_changes": false
+}

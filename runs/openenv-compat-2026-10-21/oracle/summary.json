@@ -1,0 +1,23 @@
+{
+  "agent": "oracle",
+  "task": "/private/tmp/csi-openenv-check.8cpta14g/task-eval-F",
+  "trial": "/private/tmp/csi-openenv-check.8cpta14g/oracle/trials/csi-openenv-check-task-eval-F-54992e8e",
+  "report": {
+    "reward": 0.45833333333333337,
+    "valid": true,
+    "reason": "completed exactly 16 legal queries",
+    "queries": 16,
+    "initial_accuracy": 0.125,
+    "final_accuracy": 0.5833333333333334,
+    "accuracy_gain": 0.45833333333333337
+  },
+  "reward_preserved": true,
+  "private_sidecar_artifact_collected": true,
+  "journal_sha256": "3abb0851d08e35ec5eecf18529dc654889bfabf62f01fed0fc50f689acafec71",
+  "queries": 16,
+  "model_calls": 0,
+  "session_cleaned_up": true,
+  "openenv_ok": false,
+  "expected_capture_rejection": "[FATAL] no_turns: the intercept saw no model calls: the agent never reached it (wrong base URL, unresolved model, or auth rejected)",
+  "scope": "Harbor lifecycle and reward check; no LLM capture or training validated"
+}

@@ -1,0 +1,12 @@
+{
+    "task": {
+        "path": "/private/tmp/csi-openenv-check.8cpta14g/task-eval-F"
+    },
+    "trial_name": "csi-openenv-check-task-eval-F-3b47104e",
+    "trials_dir": "/private/tmp/csi-openenv-check.8cpta14g/nop/trials",
+    "agent": {
+        "name": "nop",
+        "model_name": "",
+        "override_timeout_sec": 120.0
+    }
+}

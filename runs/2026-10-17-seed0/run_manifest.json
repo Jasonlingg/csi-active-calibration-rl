@@ -1,0 +1,84 @@
+{
+  "purpose": "Local offline RL environment prototype; no frontier-model trials or publishing",
+  "training": {
+    "episodes": 400,
+    "seed": 0,
+    "budget": 16,
+    "receivers": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "evaluation_used_for_updates_or_tuning": false
+  },
+  "evaluation": {
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "receivers": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G"
+    ],
+    "policy_execution": "frozen greedy argmax",
+    "unique_reward_events": 24,
+    "receiver_event_pairs": 168
+  },
+  "commands": [
+    "python -m active_calibration.train --episodes 400 --seed 0 --budget 16 --out experiments/csi-active-calibration-rl/runs/2026-10-17-seed0/train",
+    "python -m active_calibration.evaluate --checkpoint experiments/csi-active-calibration-rl/runs/2026-10-17-seed0/train/policy.pt --out experiments/csi-active-calibration-rl/runs/2026-10-17-seed0/evaluation.json",
+    "python -m pytest experiments/csi-active-calibration-rl/tests -q",
+    "python -m active_calibration.demo --receiver F --policy uncertainty"
+  ],
+  "validation": {
+    "tests_passed": 23,
+    "tests_failed": 0,
+    "warnings": "Two Gymnasium generic warnings for unbounded classifier-score Box bounds",
+    "demo_F_uncertainty": {
+      "initial_accuracy": 0.125,
+      "final_accuracy": 0.5833333333333334,
+      "reward": 0.45833333333333337,
+      "queries": 16
+    }
+  },
+  "runtime": {
+    "interpreter": "/private/tmp/csi-active-calibration-rl-venv/bin/python",
+    "python": "3.11.9",
+    "numpy": "2.4.3",
+    "gymnasium": "1.4.0",
+    "torch": "2.10.0",
+    "pytest": "9.0.2"
+  },
+  "source_sha256": {
+    "active_calibration/__init__.py": "27a4a691de936e9663004709c73160ef5f79f0dbb29d165e5e254e9ca8cc4d48",
+    "active_calibration/data.py": "dbd2cafee131587cbc7c20ab7ab4765d7d7d2868981e7c7e143868782983c4bf",
+    "active_calibration/demo.py": "e0d684a743d3f02991fe1bab0c393969891a09a7d854eee03702941367d9876d",
+    "active_calibration/env.py": "fc9ad1c26de62c22ed5df13b67f0018be5efbe6d36a8fb7eef893549a805cef0",
+    "active_calibration/evaluate.py": "f839212bc68b7dd3fd7781d8d5c49a84df8e744972f7c02f53fbe287cc318323",
+    "active_calibration/learner.py": "79f4691ff0c27c25bba82354168898e7d72d256878651be277631d22db7632a0",
+    "active_calibration/policy.py": "a0f0a420e4f46e099c731ed37bf3bcb28c266e71138c78c8070d0c3b572c70cc",
+    "active_calibration/train.py": "b278b6d835344f66d9710a3b4bb84e170fb6a0024bc78115bbc3523354f52d09",
+    "tests/conftest.py": "38a14ff8940d7de08add748eefed139c2eb2ecac9a24aa443e5b0385632568fb",
+    "tests/test_data.py": "d98c404ff6d1a3aac6c5970a881b55e5b6f7a83e8a4a3478e7934cbc2839e542",
+    "tests/test_env.py": "a5cab04cd170f647761804193869e90359c2414259fdf1e78ff9d60b2d3e6914",
+    "tests/test_learner.py": "ff072e970108f11616063300489a8c895be9970ae92b62d15ef248f236f30d91",
+    "tests/test_policy.py": "c9a0b454476fb91834553e500654ea84ffc5b64ae54aad6e5c5370243821ce68",
+    "pyproject.toml": "53e36d84e79dc2e206d91194a50f92418d826d5c67cd87e51e486f96831e4a28"
+  },
+  "artifact_sha256": {
+    "train/policy.pt": "c7a12209710f428064bce2797f1e721f1e55efc5aff69f134d65c646ff7640f7",
+    "train/config.json": "dc6730e1289e0357c23021d2cbe6be6ce66377faab337379cacab0cf4613fd47",
+    "train/learning_history.json": "3683df9a01e6a1ac6d513e637708656cd47eb4598fd66c00bc9366efdcd35547",
+    "evaluation.json": "8aa96dde06d6f6a283e3cbdaec3202028cd58a7c661c84428b6fbe3545c794b3"
+  }
+}

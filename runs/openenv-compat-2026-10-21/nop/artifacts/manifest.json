@@ -1,0 +1,18 @@
+[
+  {
+    "source": "/logs/artifacts",
+    "destination": "artifacts/logs/artifacts",
+    "type": "directory",
+    "status": "ok",
+    "service": null,
+    "exclude": []
+  },
+  {
+    "source": "/state/query_history.json",
+    "destination": "artifacts/state/query_history.json",
+    "type": "file",
+    "status": "ok",
+    "service": "calibration",
+    "exclude": []
+  }
+]

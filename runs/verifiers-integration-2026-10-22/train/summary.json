@@ -1,0 +1,24 @@
+{
+  "checks": [
+    {
+      "task": "csi-train-A-seed0",
+      "strategy": "margin",
+      "reward": 0.125,
+      "queries": 16,
+      "model_calls": 0,
+      "trainable": false,
+      "ok": true
+    },
+    {
+      "task": "csi-train-A-seed0",
+      "strategy": "nop",
+      "reward": -1.0,
+      "queries": 0,
+      "model_calls": 0,
+      "trainable": false,
+      "ok": true
+    }
+  ],
+  "scope": "Scripted lifecycle checks; LLM capture and training are unvalidated",
+  "published": false
+}

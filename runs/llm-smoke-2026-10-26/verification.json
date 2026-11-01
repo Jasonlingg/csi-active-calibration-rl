@@ -1,0 +1,110 @@
+{
+  "date": "2026-10-26",
+  "model": {
+    "id": "Qwen/Qwen3-8B",
+    "sha": "b968826d9c46dd6066d109eabc6255188de91218",
+    "safetensors": {
+      "parameters": {
+        "BF16": 8190735360
+      },
+      "total": 8190735360
+    }
+  },
+  "scope": "Inference smoke test and one retry for context handling; no training or publication",
+  "verifiers_revision": "c4e2f24a9ae0434ab55f5627c9086633b9391ad6",
+  "temporary_pod": "luleoifj03tqto",
+  "gpu_rate_usd_per_hour": 0.59,
+  "gpu_memory_reserved_mib": 36597,
+  "gpu_memory_total_mib": 46068,
+  "episode_bundle_sha256": "2a8af7bfe3e9b959df6878c8918361de89a17aae84e09e72c5387005d1547bbf",
+  "tool_preflight_passed": true,
+  "attempts": [
+    {
+      "attempt": "initial",
+      "task": "csi-train-A-seed0",
+      "trace_id": "cb9eb85db1e54e2baf6a6686a21a3af6",
+      "native_trace_ok": true,
+      "task_completed": false,
+      "stop_condition": "agent_completed",
+      "report": {
+        "reward": -1.0,
+        "valid": false,
+        "reason": "invalid history or replay: ValueError: history must contain exactly 16 actions",
+        "queries": 3
+      },
+      "independent_replay_exact": true,
+      "num_input_tokens": 29183,
+      "num_output_tokens": 140,
+      "capture": {
+        "calls": 6,
+        "successful_calls": 5,
+        "failed_calls": 1,
+        "sampled_nodes": 5,
+        "sampled_nodes_with_token_ids": 0
+      },
+      "errors": [
+        {
+          "type": "ProviderError",
+          "message": "upstream 400: {\"error\":{\"message\":\"This model's maximum context length is 32768 tokens. However, your request has 43654 input tokens. Please reduce the length of the input messages. None\",\"type\":\"BadRequestError\",\"param\":null,\"code\":400}}",
+          "status_code": 400
+        }
+      ],
+      "trace": "native/csi-label-selection--qwen--qwen3-8b--bash--362bc83a/traces.jsonl",
+      "history": "native/csi-label-selection--qwen--qwen3-8b--bash--362bc83a/artifacts/cb9eb85db1e54e2baf6a6686a21a3af6/state/query_history.json"
+    },
+    {
+      "attempt": "native-compaction",
+      "task": "csi-train-A-seed0",
+      "trace_id": "b8659fc9467949a1a8939156cdc85336",
+      "native_trace_ok": true,
+      "task_completed": false,
+      "stop_condition": "agent_completed",
+      "report": {
+        "reward": -1.0,
+        "valid": false,
+        "reason": "invalid history or replay: ValueError: history must contain exactly 16 actions",
+        "queries": 1
+      },
+      "independent_replay_exact": true,
+      "num_input_tokens": 30162,
+      "num_output_tokens": 716,
+      "capture": {
+        "calls": 6,
+        "successful_calls": 6,
+        "failed_calls": 0,
+        "sampled_nodes": 6,
+        "sampled_nodes_with_token_ids": 0
+      },
+      "errors": [],
+      "trace": "native-compaction/csi-label-selection--qwen--qwen3-8b--bash--c443ae94/traces.jsonl",
+      "history": "native-compaction/csi-label-selection--qwen--qwen3-8b--bash--c443ae94/artifacts/b8659fc9467949a1a8939156cdc85336/state/query_history.json"
+    }
+  ],
+  "llm_completed_episode": false,
+  "exact_training_token_capture_validated": false,
+  "training_run": false,
+  "published": false,
+  "cleanup": {
+    "temporary_pod_terminated": true,
+    "get_after_termination_status": 404,
+    "all_three_existing_pods_status": "EXITED",
+    "remaining_verifiers_containers": [],
+    "ssh_tunnel_closed": true,
+    "cost_guard_cancelled_after_verified_deletion": true
+  },
+  "compute_estimate": {
+    "currency": "USD",
+    "temporary_pod_created_at": "2026-10-26T20:50:55.255Z",
+    "temporary_pod_termination_confirmed_at": "2026-10-26T20:59:07Z",
+    "temporary_pod_approx_seconds": 492,
+    "temporary_pod_approx_cost": 0.08063333333333332,
+    "failed_existing_pod_start_at": "2026-10-26T20:49:20.129Z",
+    "note": "Elapsed time times the rate from Runpod reads; estimate, not final billed amount. Excludes existing storage.",
+    "failed_existing_pod_duration_upper_bound_seconds": 95,
+    "combined_compute_estimated_range_usd": [
+      0.08063333333333332,
+      0.09620277777777778
+    ],
+    "billing_records_available_at_check": false
+  }
+}

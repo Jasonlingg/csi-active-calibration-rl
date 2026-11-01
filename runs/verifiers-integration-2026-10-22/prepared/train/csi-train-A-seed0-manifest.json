@@ -1,0 +1,38 @@
+{
+  "receiver": "A",
+  "split": "train",
+  "seed": 0,
+  "budget": 16,
+  "project_root": "/Users/jasonling/Documents/GitHub/csi-active-calibration-rl",
+  "harbor_version_target": "0.24.0",
+  "sha256": {
+    "environment/Dockerfile": "c6e47c76f18891093dab2a1eb54b5a82af9f0d63a20d988e06e36d54732c5a0c",
+    "environment/calibration/Dockerfile": "8d8b996158a7fee7c2a0e61a9f825bb77c759b7b9e6a01cb95f7f074916edd0d",
+    "environment/calibration/active_calibration/__init__.py": "27a4a691de936e9663004709c73160ef5f79f0dbb29d165e5e254e9ca8cc4d48",
+    "environment/calibration/active_calibration/data.py": "7aa8d34ac394047b64249b7c65b55ca67f837b941fd0ec772877e79bbe68219b",
+    "environment/calibration/active_calibration/env.py": "fc9ad1c26de62c22ed5df13b67f0018be5efbe6d36a8fb7eef893549a805cef0",
+    "environment/calibration/active_calibration/harbor_service.py": "a87ba7150c9d76b2299ab0d7e655be7fb26b6311a7013c710ab3dad92fafff80",
+    "environment/calibration/active_calibration/learner.py": "79f4691ff0c27c25bba82354168898e7d72d256878651be277631d22db7632a0",
+    "environment/calibration/episode.npz": "2a8af7bfe3e9b959df6878c8918361de89a17aae84e09e72c5387005d1547bbf",
+    "environment/client.py": "adf754d768156f07b0184053adb078357c351989bf81caf3703c2a45a9b06edc",
+    "environment/docker-compose.yaml": "f8426e24fb812914f5254a2a2eb4dcd55754f08b516738adf65830e62f95d9e4",
+    "instruction.md": "4555b3aeeb138af781154a107627fac5ceef8f42c5b933a23f953d9205018bc6",
+    "solution/harbor_client.py": "adf754d768156f07b0184053adb078357c351989bf81caf3703c2a45a9b06edc",
+    "solution/run_baseline.py": "bd34840eb144102989de65f341735b043465bbf035508ec6584c539426aa4b1f",
+    "solution/solve.sh": "5fe8c84fca0e59201baf278fac379b4c53980ed949b3d4912cef4859a3d5e1b8",
+    "task.toml": "cf19ccf4d4db74e2397b192e7b9bdae7197744d3b556f3c7190317374e8121b5",
+    "tests/Dockerfile": "38977ba434821310d542fcc9fa468b0abf34a9fdfcc37aea7333dfc438c691fd",
+    "tests/active_calibration/__init__.py": "27a4a691de936e9663004709c73160ef5f79f0dbb29d165e5e254e9ca8cc4d48",
+    "tests/active_calibration/data.py": "7aa8d34ac394047b64249b7c65b55ca67f837b941fd0ec772877e79bbe68219b",
+    "tests/active_calibration/env.py": "fc9ad1c26de62c22ed5df13b67f0018be5efbe6d36a8fb7eef893549a805cef0",
+    "tests/active_calibration/harbor_grader.py": "f680d50d2763b4a018c1afbcb4b94021ff867e8ccb567aad9b0c3f9b16ad7109",
+    "tests/active_calibration/learner.py": "79f4691ff0c27c25bba82354168898e7d72d256878651be277631d22db7632a0",
+    "tests/episode.npz": "2a8af7bfe3e9b959df6878c8918361de89a17aae84e09e72c5387005d1547bbf",
+    "tests/test.sh": "25d8a7f60dd702724499938f68f47b7c9471aadf7483c8e62e739192ba7e4f96"
+  },
+  "purpose": "Interactive research task; not a Terminal-Bench submission or proven cheat-resistant benchmark",
+  "verifiers": {
+    "revision": "c4e2f24a9ae0434ab55f5627c9086633b9391ad6",
+    "verifier_image": "sha256:a0c590f6f266f3ff04f54c6cdd00c0ba260f1f4baea1666ea564d8dca748e774"
+  }
+}

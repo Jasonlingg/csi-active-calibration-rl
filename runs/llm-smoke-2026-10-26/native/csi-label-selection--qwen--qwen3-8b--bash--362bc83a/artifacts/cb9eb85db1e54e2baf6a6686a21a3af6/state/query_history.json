@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "bundle_sha256": "2a8af7bfe3e9b959df6878c8918361de89a17aae84e09e72c5387005d1547bbf",
+  "seed": 0,
+  "budget": 16,
+  "actions": [
+    0,
+    1,
+    2
+  ]
+}

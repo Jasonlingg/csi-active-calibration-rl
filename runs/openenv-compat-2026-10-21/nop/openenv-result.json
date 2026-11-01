@@ -1,0 +1,36 @@
+{
+  "task_id": "/private/tmp/csi-openenv-check.8cpta14g/task-eval-F",
+  "task_name": "task-eval-F",
+  "dataset": "",
+  "harness": "nop",
+  "sandbox": "docker",
+  "trial_name": "csi-openenv-check-task-eval-F-3b47104e",
+  "session_id": "s77b717e5731be57731fef686",
+  "reward": -1.0,
+  "rewards": {
+    "reward": -1.0
+  },
+  "reward_key": "reward",
+  "step_results": [],
+  "rollout_type": "eval",
+  "capture_level": "text",
+  "param_fixes": [],
+  "turns": [],
+  "conversations": [],
+  "n_turns": 0,
+  "n_roots": 0,
+  "budget_stop_count": 0,
+  "n_trainable_tokens": 0,
+  "multi_turn": false,
+  "atif": "none",
+  "trace_source": "",
+  "findings": [
+    "[FATAL] no_turns: the intercept saw no model calls: the agent never reached it (wrong base URL, unresolved model, or auth rejected)"
+  ],
+  "wall_s": 11.56,
+  "phase_timings": {},
+  "agent_log_tail": "",
+  "ok": false,
+  "error": "[FATAL] no_turns: the intercept saw no model calls: the agent never reached it (wrong base URL, unresolved model, or auth rejected)",
+  "exception_type": null
+}

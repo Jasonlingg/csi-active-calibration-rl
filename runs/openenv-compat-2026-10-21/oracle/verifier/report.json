@@ -1,0 +1,9 @@
+{
+  "reward": 0.45833333333333337,
+  "valid": true,
+  "reason": "completed exactly 16 legal queries",
+  "queries": 16,
+  "initial_accuracy": 0.125,
+  "final_accuracy": 0.5833333333333334,
+  "accuracy_gain": 0.45833333333333337
+}

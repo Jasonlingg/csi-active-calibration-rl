@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "split": "eval",
+  "tasks": [
+    {
+      "path": "tasks/csi-eval-A-seed0",
+      "manifest_sha256": "109a3033f2d07df8e0a92cd598d9cd9d186dc422159ec7976c568cdf9af553a0"
+    },
+    {
+      "path": "tasks/csi-eval-B-seed0",
+      "manifest_sha256": "2797834022ba320621de436bc3a701a224140e16e958bbcb6c68a2075825c41d"
+    },
+    {
+      "path": "tasks/csi-eval-C-seed0",
+      "manifest_sha256": "6a716450f2dc3499acd6014015fea48fcafb4f171b91585844285ec980f6abd5"
+    },
+    {
+      "path": "tasks/csi-eval-D-seed0",
+      "manifest_sha256": "79c52c1e168a0bf6369dbdb7a76ec8189089ebfeed9156d90437c3e4710ad213"
+    },
+    {
+      "path": "tasks/csi-eval-E-seed0",
+      "manifest_sha256": "443c4b8e83040a3bb7cf58156cb8f3c822aabd30087021028f16596d3f4bee2a"
+    },
+    {
+      "path": "tasks/csi-eval-F-seed0",
+      "manifest_sha256": "0cdcc5b6011e89886d6ec20f2fb8ff3c6334920a91dc559d39af8a2f3fe5187b"
+    },
+    {
+      "path": "tasks/csi-eval-G-seed0",
+      "manifest_sha256": "2091ef4604a095ecbc67cfaf1789cb1b0ca923a5b6a0f17aa517fff82728b6cf"
+    }
+  ],
+  "verifiers_revision": "c4e2f24a9ae0434ab55f5627c9086633b9391ad6",
+  "scope": "Local Docker integration; images have not been published"
+}

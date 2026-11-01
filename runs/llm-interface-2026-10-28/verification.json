@@ -1,0 +1,44 @@
+{
+  "core_tests": 60,
+  "harbor_tests": 27,
+  "optional_tests": 13,
+  "harbor_version": "0.24.0",
+  "model_calls": 0,
+  "gpu_started": false,
+  "published": false,
+  "submitted": false,
+  "docker_checks": [
+    {
+      "agent": "reference",
+      "report": {
+        "reward": 0.45833333333333337,
+        "valid": true,
+        "reason": "completed exactly 16 legal queries",
+        "queries": 16,
+        "initial_accuracy": 0.125,
+        "final_accuracy": 0.5833333333333334,
+        "accuracy_gain": 0.45833333333333337
+      },
+      "independent_replay_matches": true,
+      "job": "harbor_runs/llm-interface-2026-10-28-reference"
+    },
+    {
+      "agent": "nop",
+      "report": {
+        "reward": -1.0,
+        "valid": false,
+        "reason": "invalid history or replay: ValueError: history must contain exactly 16 actions",
+        "queries": 0
+      },
+      "independent_replay_matches": true,
+      "job": "harbor_runs/llm-interface-2026-10-28-nop"
+    }
+  ],
+  "tokenizer_model": "Qwen/Qwen3-8B",
+  "tokenizer_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "tokenizers_version": "0.21.4",
+  "precision": "display only rounded to four decimal places",
+  "scope": "local interface and scripted regression checks; not successful LLM completion or training",
+  "preserved_prior_files": 136,
+  "smoke_configs_dry_run_passed": true
+}

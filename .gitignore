@@ -1,0 +1,11 @@
+__pycache__/
+.pytest_cache/
+*.egg-info/
+.venv/
+.DS_Store
+raw/
+harbor_tasks/
+harbor_runs/
+verifiers_tasks/
+verifiers_runs/
+integrations/verifiers/build/

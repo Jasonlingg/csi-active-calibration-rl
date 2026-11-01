@@ -1,0 +1,14 @@
+[
+  {
+    "source": "/logs/artifacts",
+    "service": "main",
+    "destination": "logs/artifacts",
+    "status": "ok"
+  },
+  {
+    "source": "/state/query_history.json",
+    "service": "calibration",
+    "destination": "state/query_history.json",
+    "status": "ok"
+  }
+]

@@ -1,0 +1,888 @@
+{
+  "scope": "CPU formatting audit on identical full-precision margin actions; no LLM calls or learning",
+  "excludes": "prompts, chat templates, tool schemas, model outputs; counts are not training capture",
+  "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+  "source_sha256": {
+    "/Users/jasonling/Documents/GitHub/csi-active-calibration-rl/experiments/measure_llm_observations.py": "5344b1eaa011d1336ac7a88d8c19b0af3f86cf7734b03aaea9d09b09347bc76e",
+    "active_calibration/harbor_client.py": "1050fc010b4fcb2dfc07ed6f655faca6bdc26e53a974476f2f76197dc0964464",
+    "active_calibration/harbor_task.py": "a23c84513f895ea1709b0750cfa8de5a1b0f7462f64e42b0f0fc056c2af661d5"
+  },
+  "episodes": [
+    {
+      "split": "train",
+      "receiver": "A",
+      "seed": 0,
+      "actions": [
+        18,
+        6,
+        4,
+        11,
+        13,
+        3,
+        14,
+        2,
+        17,
+        8,
+        5,
+        12,
+        19,
+        7,
+        22,
+        23
+      ],
+      "report": {
+        "reward": 0.125,
+        "valid": true,
+        "reason": "completed exactly 16 legal queries",
+        "queries": 16,
+        "initial_accuracy": 0.125,
+        "final_accuracy": 0.25,
+        "accuracy_gain": 0.125
+      },
+      "sizes": {
+        "full": {
+          "bytes": 444286,
+          "text_tokens": 318521,
+          "cumulative_text_input_tokens": 2874085
+        },
+        "minified_full": {
+          "bytes": 293886,
+          "text_tokens": 283364,
+          "cumulative_text_input_tokens": 2557976
+        },
+        "compact": {
+          "bytes": 25318,
+          "text_tokens": 20339,
+          "cumulative_text_input_tokens": 236127
+        }
+      },
+      "journal": {
+        "schema_version": 1,
+        "bundle_sha256": "2a8af7bfe3e9b959df6878c8918361de89a17aae84e09e72c5387005d1547bbf",
+        "seed": 0,
+        "budget": 16,
+        "actions": [
+          18,
+          6,
+          4,
+          11,
+          13,
+          3,
+          14,
+          2,
+          17,
+          8,
+          5,
+          12,
+          19,
+          7,
+          22,
+          23
+        ]
+      }
+    },
+    {
+      "split": "train",
+      "receiver": "B",
+      "seed": 0,
+      "actions": [
+        23,
+        6,
+        16,
+        14,
+        12,
+        15,
+        8,
+        7,
+        10,
+        22,
+        20,
+        3,
+        18,
+        5,
+        2,
+        9
+      ],
+      "report": {
+        "reward": 0.16666666666666669,
+        "valid": true,
+        "reason": "completed exactly 16 legal queries",
+        "queries": 16,
+        "initial_accuracy": 0.125,
+        "final_accuracy": 0.2916666666666667,
+        "accuracy_gain": 0.16666666666666669
+      },
+      "sizes": {
+        "full": {
+          "bytes": 443785,
+          "text_tokens": 317752,
+          "cumulative_text_input_tokens": 2865314
+        },
+        "minified_full": {
+          "bytes": 293385,
+          "text_tokens": 282595,
+          "cumulative_text_input_tokens": 2549205
+        },
+        "compact": {
+          "bytes": 26011,
+          "text_tokens": 20798,
+          "cumulative_text_input_tokens": 242775
+        }
+      },
+      "journal": {
+        "schema_version": 1,
+        "bundle_sha256": "8710485e8683ffcca10ef737e7bdf50f24b73e36e66905ebfbd74fc28672052b",
+        "seed": 0,
+        "budget": 16,
+        "actions": [
+          23,
+          6,
+          16,
+          14,
+          12,
+          15,
+          8,
+          7,
+          10,
+          22,
+          20,
+          3,
+          18,
+          5,
+          2,
+          9
+        ]
+      }
+    },
+    {
+      "split": "train",
+      "receiver": "C",
+      "seed": 0,
+      "actions": [
+        16,
+        12,
+        11,
+        5,
+        0,
+        8,
+        17,
+        6,
+        21,
+        18,
+        22,
+        20,
+        10,
+        4,
+        1,
+        7
+      ],
+      "report": {
+        "reward": 0.20833333333333331,
+        "valid": true,
+        "reason": "completed exactly 16 legal queries",
+        "queries": 16,
+        "initial_accuracy": 0.125,
+        "final_accuracy": 0.3333333333333333,
+        "accuracy_gain": 0.20833333333333331
+      },
+      "sizes": {
+        "full": {
+          "bytes": 444808,
+          "text_tokens": 318353,
+          "cumulative_text_input_tokens": 2869753
+        },
+        "minified_full": {
+          "bytes": 294408,
+          "text_tokens": 283196,
+          "cumulative_text_input_tokens": 2553644
+        },
+        "compact": {
+          "bytes": 26956,
+          "text_tokens": 21555,
+          "cumulative_text_input_tokens": 253450
+        }
+      },
+      "journal": {
+        "schema_version": 1,
+        "bundle_sha256": "3decea734a32adcd51c8efe1e6b34d64e414bf1468ae854e0581a0018517779f",
+        "seed": 0,
+        "budget": 16,
+        "actions": [
+          16,
+          12,
+          11,
+          5,
+          0,
+          8,
+          17,
+          6,
+          21,
+          18,
+          22,
+          20,
+          10,
+          4,
+          1,
+          7
+        ]
+      }
+    },
+    {
+      "split": "train",
+      "receiver": "D",
+      "seed": 0,
+      "actions": [
+        0,
+        18,
+        8,
+        11,
+        3,
+        9,
+        1,
+        13,
+        19,
+        10,
+        22,
+        16,
+        5,
+        12,
+        20,
+        15
+      ],
+      "report": {
+        "reward": 0.2916666666666667,
+        "valid": true,
+        "reason": "completed exactly 16 legal queries",
+        "queries": 16,
+        "initial_accuracy": 0.2916666666666667,
+        "final_accuracy": 0.5833333333333334,
+        "accuracy_gain": 0.2916666666666667
+      },
+      "sizes": {
+        "full": {
+          "bytes": 444287,
+          "text_tokens": 318095,
+          "cumulative_text_input_tokens": 2868525
+        },
+        "minified_full": {
+          "bytes": 293887,
+          "text_tokens": 282938,
+          "cumulative_text_input_tokens": 2552416
+        },
+        "compact": {
+          "bytes": 24686,
+          "text_tokens": 19628,
+          "cumulative_text_input_tokens": 227267
+        }
+      },
+      "journal": {
+        "schema_version": 1,
+        "bundle_sha256": "6717dacdd369c755fb7dfde86dbeb656eec1486f1febdb8d54a41d31d883ceb9",
+        "seed": 0,
+        "budget": 16,
+        "actions": [
+          0,
+          18,
+          8,
+          11,
+          3,
+          9,
+          1,
+          13,
+          19,
+          10,
+          22,
+          16,
+          5,
+          12,
+          20,
+          15
+        ]
+      }
+    },
+    {
+      "split": "train",
+      "receiver": "E",
+      "seed": 0,
+      "actions": [
+        8,
+        12,
+        6,
+        19,
+        16,
+        17,
+        3,
+        22,
+        20,
+        14,
+        4,
+        5,
+        9,
+        21,
+        13,
+        1
+      ],
+      "report": {
+        "reward": 0.375,
+        "valid": true,
+        "reason": "completed exactly 16 legal queries",
+        "queries": 16,
+        "initial_accuracy": 0.125,
+        "final_accuracy": 0.5,
+        "accuracy_gain": 0.375
+      },
+      "sizes": {
+        "full": {
+          "bytes": 443230,
+          "text_tokens": 317352,
+          "cumulative_text_input_tokens": 2861915
+        },
+        "minified_full": {
+          "bytes": 292830,
+          "text_tokens": 282195,
+          "cumulative_text_input_tokens": 2545806
+        },
+        "compact": {
+          "bytes": 25934,
+          "text_tokens": 20774,
+          "cumulative_text_input_tokens": 241481
+        }
+      },
+      "journal": {
+        "schema_version": 1,
+        "bundle_sha256": "89c7fc62f3d46916aaef57f4f69b5adf80005f19deec6c2ec1e20bbdf82ede77",
+        "seed": 0,
+        "budget": 16,
+        "actions": [
+          8,
+          12,
+          6,
+          19,
+          16,
+          17,
+          3,
+          22,
+          20,
+          14,
+          4,
+          5,
+          9,
+          21,
+          13,
+          1
+        ]
+      }
+    },
+    {
+      "split": "eval",
+      "receiver": "A",
+      "seed": 0,
+      "actions": [
+        11,
+        18,
+        22,
+        0,
+        12,
+        23,
+        19,
+        20,
+        3,
+        15,
+        13,
+        5,
+        9,
+        21,
+        7,
+        4
+      ],
+      "report": {
+        "reward": 0.16666666666666669,
+        "valid": true,
+        "reason": "completed exactly 16 legal queries",
+        "queries": 16,
+        "initial_accuracy": 0.125,
+        "final_accuracy": 0.2916666666666667,
+        "accuracy_gain": 0.16666666666666669
+      },
+      "sizes": {
+        "full": {
+          "bytes": 443969,
+          "text_tokens": 317728,
+          "cumulative_text_input_tokens": 2863421
+        },
+        "minified_full": {
+          "bytes": 293569,
+          "text_tokens": 282571,
+          "cumulative_text_input_tokens": 2547312
+        },
+        "compact": {
+          "bytes": 25803,
+          "text_tokens": 20598,
+          "cumulative_text_input_tokens": 242735
+        }
+      },
+      "journal": {
+        "schema_version": 1,
+        "bundle_sha256": "176e501a3e788212c391e158907b62b6a5556058578ec319b0dcfc974dd7bd2b",
+        "seed": 0,
+        "budget": 16,
+        "actions": [
+          11,
+          18,
+          22,
+          0,
+          12,
+          23,
+          19,
+          20,
+          3,
+          15,
+          13,
+          5,
+          9,
+          21,
+          7,
+          4
+        ]
+      }
+    },
+    {
+      "split": "eval",
+      "receiver": "B",
+      "seed": 0,
+      "actions": [
+        15,
+        6,
+        5,
+        14,
+        10,
+        12,
+        22,
+        23,
+        20,
+        0,
+        9,
+        18,
+        11,
+        8,
+        4,
+        13
+      ],
+      "report": {
+        "reward": 0.25,
+        "valid": true,
+        "reason": "completed exactly 16 legal queries",
+        "queries": 16,
+        "initial_accuracy": 0.125,
+        "final_accuracy": 0.375,
+        "accuracy_gain": 0.25
+      },
+      "sizes": {
+        "full": {
+          "bytes": 443618,
+          "text_tokens": 317722,
+          "cumulative_text_input_tokens": 2865377
+        },
+        "minified_full": {
+          "bytes": 293218,
+          "text_tokens": 282565,
+          "cumulative_text_input_tokens": 2549268
+        },
+        "compact": {
+          "bytes": 25785,
+          "text_tokens": 20598,
+          "cumulative_text_input_tokens": 240545
+        }
+      },
+      "journal": {
+        "schema_version": 1,
+        "bundle_sha256": "7184540f513188d53100898b460c6a0751d659220987266283c81f01746addcc",
+        "seed": 0,
+        "budget": 16,
+        "actions": [
+          15,
+          6,
+          5,
+          14,
+          10,
+          12,
+          22,
+          23,
+          20,
+          0,
+          9,
+          18,
+          11,
+          8,
+          4,
+          13
+        ]
+      }
+    },
+    {
+      "split": "eval",
+      "receiver": "C",
+      "seed": 0,
+      "actions": [
+        10,
+        2,
+        22,
+        19,
+        7,
+        16,
+        17,
+        11,
+        1,
+        21,
+        0,
+        6,
+        20,
+        23,
+        9,
+        13
+      ],
+      "report": {
+        "reward": 0.4166666666666667,
+        "valid": true,
+        "reason": "completed exactly 16 legal queries",
+        "queries": 16,
+        "initial_accuracy": 0.0,
+        "final_accuracy": 0.4166666666666667,
+        "accuracy_gain": 0.4166666666666667
+      },
+      "sizes": {
+        "full": {
+          "bytes": 443900,
+          "text_tokens": 317390,
+          "cumulative_text_input_tokens": 2861432
+        },
+        "minified_full": {
+          "bytes": 293500,
+          "text_tokens": 282233,
+          "cumulative_text_input_tokens": 2545323
+        },
+        "compact": {
+          "bytes": 26879,
+          "text_tokens": 21409,
+          "cumulative_text_input_tokens": 251089
+        }
+      },
+      "journal": {
+        "schema_version": 1,
+        "bundle_sha256": "016843d2a2fc5d113506ab682ee99bb3dc1158fb4c83806fea6e87bd815cddef",
+        "seed": 0,
+        "budget": 16,
+        "actions": [
+          10,
+          2,
+          22,
+          19,
+          7,
+          16,
+          17,
+          11,
+          1,
+          21,
+          0,
+          6,
+          20,
+          23,
+          9,
+          13
+        ]
+      }
+    },
+    {
+      "split": "eval",
+      "receiver": "D",
+      "seed": 0,
+      "actions": [
+        9,
+        20,
+        15,
+        18,
+        0,
+        16,
+        12,
+        19,
+        7,
+        1,
+        17,
+        8,
+        10,
+        3,
+        11,
+        23
+      ],
+      "report": {
+        "reward": 0.16666666666666669,
+        "valid": true,
+        "reason": "completed exactly 16 legal queries",
+        "queries": 16,
+        "initial_accuracy": 0.125,
+        "final_accuracy": 0.2916666666666667,
+        "accuracy_gain": 0.16666666666666669
+      },
+      "sizes": {
+        "full": {
+          "bytes": 444501,
+          "text_tokens": 318570,
+          "cumulative_text_input_tokens": 2874043
+        },
+        "minified_full": {
+          "bytes": 294101,
+          "text_tokens": 283413,
+          "cumulative_text_input_tokens": 2557934
+        },
+        "compact": {
+          "bytes": 25574,
+          "text_tokens": 20450,
+          "cumulative_text_input_tokens": 237768
+        }
+      },
+      "journal": {
+        "schema_version": 1,
+        "bundle_sha256": "025bd41322d2c0e21b8e3b27babfa8edd8c448c4d111573c2badde71f23f15b2",
+        "seed": 0,
+        "budget": 16,
+        "actions": [
+          9,
+          20,
+          15,
+          18,
+          0,
+          16,
+          12,
+          19,
+          7,
+          1,
+          17,
+          8,
+          10,
+          3,
+          11,
+          23
+        ]
+      }
+    },
+    {
+      "split": "eval",
+      "receiver": "E",
+      "seed": 0,
+      "actions": [
+        3,
+        13,
+        6,
+        19,
+        14,
+        15,
+        18,
+        16,
+        7,
+        22,
+        1,
+        5,
+        9,
+        12,
+        21,
+        17
+      ],
+      "report": {
+        "reward": 0.08333333333333331,
+        "valid": true,
+        "reason": "completed exactly 16 legal queries",
+        "queries": 16,
+        "initial_accuracy": 0.4166666666666667,
+        "final_accuracy": 0.5,
+        "accuracy_gain": 0.08333333333333331
+      },
+      "sizes": {
+        "full": {
+          "bytes": 444302,
+          "text_tokens": 318420,
+          "cumulative_text_input_tokens": 2872161
+        },
+        "minified_full": {
+          "bytes": 293902,
+          "text_tokens": 283263,
+          "cumulative_text_input_tokens": 2556052
+        },
+        "compact": {
+          "bytes": 25092,
+          "text_tokens": 19996,
+          "cumulative_text_input_tokens": 230495
+        }
+      },
+      "journal": {
+        "schema_version": 1,
+        "bundle_sha256": "6dac217b9592654a4b41d7e587d75a13227ff043a19599ea728714efa7764421",
+        "seed": 0,
+        "budget": 16,
+        "actions": [
+          3,
+          13,
+          6,
+          19,
+          14,
+          15,
+          18,
+          16,
+          7,
+          22,
+          1,
+          5,
+          9,
+          12,
+          21,
+          17
+        ]
+      }
+    },
+    {
+      "split": "eval",
+      "receiver": "F",
+      "seed": 0,
+      "actions": [
+        13,
+        14,
+        16,
+        3,
+        21,
+        2,
+        1,
+        9,
+        20,
+        7,
+        8,
+        0,
+        5,
+        23,
+        11,
+        12
+      ],
+      "report": {
+        "reward": 0.45833333333333337,
+        "valid": true,
+        "reason": "completed exactly 16 legal queries",
+        "queries": 16,
+        "initial_accuracy": 0.125,
+        "final_accuracy": 0.5833333333333334,
+        "accuracy_gain": 0.45833333333333337
+      },
+      "sizes": {
+        "full": {
+          "bytes": 443133,
+          "text_tokens": 316915,
+          "cumulative_text_input_tokens": 2853741
+        },
+        "minified_full": {
+          "bytes": 292733,
+          "text_tokens": 281758,
+          "cumulative_text_input_tokens": 2537632
+        },
+        "compact": {
+          "bytes": 27500,
+          "text_tokens": 22044,
+          "cumulative_text_input_tokens": 259052
+        }
+      },
+      "journal": {
+        "schema_version": 1,
+        "bundle_sha256": "f0a678753bbe714e387362583eb219aa35201c2e908de50ec555aad7ac5f24ca",
+        "seed": 0,
+        "budget": 16,
+        "actions": [
+          13,
+          14,
+          16,
+          3,
+          21,
+          2,
+          1,
+          9,
+          20,
+          7,
+          8,
+          0,
+          5,
+          23,
+          11,
+          12
+        ]
+      }
+    },
+    {
+      "split": "eval",
+      "receiver": "G",
+      "seed": 0,
+      "actions": [
+        23,
+        10,
+        22,
+        21,
+        2,
+        1,
+        3,
+        13,
+        15,
+        9,
+        11,
+        20,
+        14,
+        18,
+        19,
+        12
+      ],
+      "report": {
+        "reward": 0.375,
+        "valid": true,
+        "reason": "completed exactly 16 legal queries",
+        "queries": 16,
+        "initial_accuracy": 0.125,
+        "final_accuracy": 0.5,
+        "accuracy_gain": 0.375
+      },
+      "sizes": {
+        "full": {
+          "bytes": 443313,
+          "text_tokens": 317023,
+          "cumulative_text_input_tokens": 2853565
+        },
+        "minified_full": {
+          "bytes": 292913,
+          "text_tokens": 281866,
+          "cumulative_text_input_tokens": 2537456
+        },
+        "compact": {
+          "bytes": 27588,
+          "text_tokens": 22017,
+          "cumulative_text_input_tokens": 259322
+        }
+      },
+      "journal": {
+        "schema_version": 1,
+        "bundle_sha256": "1e7b89673c2ebaa808383165b79627e7a0bc31ced636bd5f671c85368e9360e3",
+        "seed": 0,
+        "budget": 16,
+        "actions": [
+          23,
+          10,
+          22,
+          21,
+          2,
+          1,
+          3,
+          13,
+          15,
+          9,
+          11,
+          20,
+          14,
+          18,
+          19,
+          12
+        ]
+      }
+    }
+  ]
+}

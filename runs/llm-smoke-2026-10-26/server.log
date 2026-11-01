@@ -1,0 +1,195 @@
+INFO 10-26 20:53:51 [__init__.py:216] Automatically detected platform cuda.
+WARNING 10-26 20:53:54 [__init__.py:1758] argument '--disable-log-requests' is deprecated and replaced with '--enable-log-requests'. This will be removed in v0.12.0.
+[1;36m(APIServer pid=806)[0;0m INFO 10-26 20:53:54 [api_server.py:1896] vLLM API server version 0.10.2
+[1;36m(APIServer pid=806)[0;0m INFO 10-26 20:53:54 [utils.py:328] non-default args: {'model_tag': 'Qwen/Qwen3-8B', 'host': '127.0.0.1', 'chat_template': '/workspace/csi-smoke-20261026/nonthinking.jinja', 'enable_auto_tool_choice': True, 'tool_call_parser': 'hermes', 'model': 'Qwen/Qwen3-8B', 'dtype': 'bfloat16', 'revision': 'b968826d9c46dd6066d109eabc6255188de91218', 'tokenizer_revision': 'b968826d9c46dd6066d109eabc6255188de91218', 'max_model_len': 32768, 'enforce_eager': True, 'gpu_memory_utilization': 0.8, 'max_num_seqs': 1}
+[1;36m(APIServer pid=806)[0;0m INFO 10-26 20:54:03 [__init__.py:742] Resolved architecture: Qwen3ForCausalLM
+[1;36m(APIServer pid=806)[0;0m INFO 10-26 20:54:03 [__init__.py:1815] Using max model len 32768
+[1;36m(APIServer pid=806)[0;0m INFO 10-26 20:54:05 [scheduler.py:222] Chunked prefill is enabled with max_num_batched_tokens=2048.
+[1;36m(APIServer pid=806)[0;0m INFO 10-26 20:54:05 [__init__.py:3400] Cudagraph is disabled under eager mode
+INFO 10-26 20:54:11 [__init__.py:216] Automatically detected platform cuda.
+[1;36m(EngineCore_DP0 pid=1185)[0;0m INFO 10-26 20:54:13 [core.py:654] Waiting for init message from front-end.
+[1;36m(EngineCore_DP0 pid=1185)[0;0m INFO 10-26 20:54:13 [core.py:76] Initializing a V1 LLM engine (v0.10.2) with config: model='Qwen/Qwen3-8B', speculative_config=None, tokenizer='Qwen/Qwen3-8B', skip_tokenizer_init=False, tokenizer_mode=auto, revision=b968826d9c46dd6066d109eabc6255188de91218, tokenizer_revision=b968826d9c46dd6066d109eabc6255188de91218, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto, device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=Qwen/Qwen3-8B, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":0,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":null,"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"cudagraph_mode":0,"use_cudagraph":true,"cudagraph_num_of_warmups":0,"cudagraph_capture_sizes":[],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"pass_config":{},"max_capture_size":0,"local_cache_dir":null}
+[W1026 20:54:17.897964198 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[1;36m(EngineCore_DP0 pid=1185)[0;0m INFO 10-26 20:54:17 [parallel_state.py:1165] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+[1;36m(EngineCore_DP0 pid=1185)[0;0m WARNING 10-26 20:54:17 [topk_topp_sampler.py:69] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+[1;36m(EngineCore_DP0 pid=1185)[0;0m INFO 10-26 20:54:17 [gpu_model_runner.py:2338] Starting to load model Qwen/Qwen3-8B...
+[1;36m(EngineCore_DP0 pid=1185)[0;0m INFO 10-26 20:54:17 [gpu_model_runner.py:2370] Loading model from scratch...
+[1;36m(EngineCore_DP0 pid=1185)[0;0m INFO 10-26 20:54:17 [cuda.py:362] Using Flash Attention backend on V1 engine.
+[1;36m(EngineCore_DP0 pid=1185)[0;0m INFO 10-26 20:54:18 [weight_utils.py:348] Using model weights format ['*.safetensors']
+[1;36m(EngineCore_DP0 pid=1185)[0;0m Loading safetensors checkpoint shards:   0% Completed | 0/5 [00:00<?, ?it/s]
+[1;36m(EngineCore_DP0 pid=1185)[0;0m Loading safetensors checkpoint shards:  20% Completed | 1/5 [00:00<00:01,  2.10it/s]
+[1;36m(EngineCore_DP0 pid=1185)[0;0m Loading safetensors checkpoint shards:  40% Completed | 2/5 [00:01<00:01,  1.81it/s]
+[1;36m(EngineCore_DP0 pid=1185)[0;0m Loading safetensors checkpoint shards:  60% Completed | 3/5 [00:01<00:01,  1.77it/s]
+[1;36m(EngineCore_DP0 pid=1185)[0;0m Loading safetensors checkpoint shards:  80% Completed | 4/5 [00:01<00:00,  2.40it/s]
+[1;36m(EngineCore_DP0 pid=1185)[0;0m Loading safetensors checkpoint shards: 100% Completed | 5/5 [00:02<00:00,  2.47it/s]
+[1;36m(EngineCore_DP0 pid=1185)[0;0m Loading safetensors checkpoint shards: 100% Completed | 5/5 [00:02<00:00,  2.24it/s]
+[1;36m(EngineCore_DP0 pid=1185)[0;0m 
+[1;36m(EngineCore_DP0 pid=1185)[0;0m INFO 10-26 20:54:20 [default_loader.py:268] Loading weights took 2.28 seconds
+[1;36m(EngineCore_DP0 pid=1185)[0;0m INFO 10-26 20:54:21 [gpu_model_runner.py:2392] Model loading took 15.2683 GiB and 2.972669 seconds
+[1;36m(EngineCore_DP0 pid=1185)[0;0m INFO 10-26 20:54:22 [gpu_worker.py:298] Available KV cache memory: 20.04 GiB
+[1;36m(EngineCore_DP0 pid=1185)[0;0m INFO 10-26 20:54:22 [kv_cache_utils.py:864] GPU KV cache size: 145,952 tokens
+[1;36m(EngineCore_DP0 pid=1185)[0;0m INFO 10-26 20:54:22 [kv_cache_utils.py:868] Maximum concurrency for 32,768 tokens per request: 4.45x
+[1;36m(EngineCore_DP0 pid=1185)[0;0m INFO 10-26 20:54:22 [gpu_worker.py:391] Free memory on device (44.12/44.42 GiB) on startup. Desired GPU memory utilization is (0.8, 35.54 GiB). Actual usage is 15.27 GiB for weight, 0.21 GiB for peak activation, 0.02 GiB for non-torch memory, and 0.0 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=21364889600` to fit into requested memory, or `--kv-cache-memory=30575384576` to fully utilize gpu memory. Current kv cache memory in use is 21522176000 bytes.
+[1;36m(EngineCore_DP0 pid=1185)[0;0m INFO 10-26 20:54:22 [core.py:218] init engine (profile, create kv cache, warmup model) took 1.55 seconds
+[1;36m(EngineCore_DP0 pid=1185)[0;0m INFO 10-26 20:54:23 [__init__.py:3400] Cudagraph is disabled under eager mode
+[1;36m(APIServer pid=806)[0;0m INFO 10-26 20:54:23 [loggers.py:142] Engine 000: vllm cache_config_info with initialization after num_gpu_blocks is: 9122
+[1;36m(APIServer pid=806)[0;0m INFO 10-26 20:54:23 [async_llm.py:180] Torch profiler disabled. AsyncLLM CPU traces will not be collected.
+[1;36m(APIServer pid=806)[0;0m INFO 10-26 20:54:23 [api_server.py:1692] Supported_tasks: ['generate']
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712] Using supplied chat template: {% set enable_thinking = false %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712] {%- if tools %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]     {{- '<|im_start|>system\n' }}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]     {%- if messages[0].role == 'system' %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]         {{- messages[0].content + '\n\n' }}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]     {%- endif %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]     {{- "# Tools\n\nYou may call one or more functions to assist with the user query.\n\nYou are provided with function signatures within <tools></tools> XML tags:\n<tools>" }}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]     {%- for tool in tools %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]         {{- "\n" }}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]         {{- tool | tojson }}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]     {%- endfor %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]     {{- "\n</tools>\n\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\n<tool_call>\n{\"name\": <function-name>, \"arguments\": <args-json-object>}\n</tool_call><|im_end|>\n" }}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712] {%- else %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]     {%- if messages[0].role == 'system' %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]         {{- '<|im_start|>system\n' + messages[0].content + '<|im_end|>\n' }}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]     {%- endif %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712] {%- endif %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712] {%- set ns = namespace(multi_step_tool=true, last_query_index=messages|length - 1) %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712] {%- for message in messages[::-1] %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]     {%- set index = (messages|length - 1) - loop.index0 %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]     {%- if ns.multi_step_tool and message.role == "user" and message.content is string and not(message.content.startswith('<tool_response>') and message.content.endswith('</tool_response>')) %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]         {%- set ns.multi_step_tool = false %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]         {%- set ns.last_query_index = index %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]     {%- endif %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712] {%- endfor %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712] {%- for message in messages %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]     {%- if message.content is string %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]         {%- set content = message.content %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]     {%- else %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]         {%- set content = '' %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]     {%- endif %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]     {%- if (message.role == "user") or (message.role == "system" and not loop.first) %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]         {{- '<|im_start|>' + message.role + '\n' + content + '<|im_end|>' + '\n' }}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]     {%- elif message.role == "assistant" %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]         {%- set reasoning_content = '' %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]         {%- if message.reasoning_content is string %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]             {%- set reasoning_content = message.reasoning_content %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]         {%- else %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]             {%- if '</think>' in content %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]                 {%- set reasoning_content = content.split('</think>')[0].rstrip('\n').split('<think>')[-1].lstrip('\n') %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]                 {%- set content = content.split('</think>')[-1].lstrip('\n') %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]             {%- endif %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]         {%- endif %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]         {%- if loop.index0 > ns.last_query_index %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]             {%- if loop.last or (not loop.last and reasoning_content) %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]                 {{- '<|im_start|>' + message.role + '\n<think>\n' + reasoning_content.strip('\n') + '\n</think>\n\n' + content.lstrip('\n') }}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]             {%- else %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]                 {{- '<|im_start|>' + message.role + '\n' + content }}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]             {%- endif %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]         {%- else %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]             {{- '<|im_start|>' + message.role + '\n' + content }}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]         {%- endif %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]         {%- if message.tool_calls %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]             {%- for tool_call in message.tool_calls %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]                 {%- if (loop.first and content) or (not loop.first) %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]                     {{- '\n' }}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]                 {%- endif %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]                 {%- if tool_call.function %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]                     {%- set tool_call = tool_call.function %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]                 {%- endif %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]                 {{- '<tool_call>\n{"name": "' }}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]                 {{- tool_call.name }}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]                 {{- '", "arguments": ' }}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]                 {%- if tool_call.arguments is string %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]                     {{- tool_call.arguments }}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]                 {%- else %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]                     {{- tool_call.arguments | tojson }}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]                 {%- endif %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]                 {{- '}\n</tool_call>' }}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]             {%- endfor %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]         {%- endif %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]         {{- '<|im_end|>\n' }}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]     {%- elif message.role == "tool" %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]         {%- if loop.first or (messages[loop.index0 - 1].role != "tool") %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]             {{- '<|im_start|>user' }}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]         {%- endif %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]         {{- '\n<tool_response>\n' }}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]         {{- content }}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]         {{- '\n</tool_response>' }}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]         {%- if loop.last or (messages[loop.index0 + 1].role != "tool") %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]             {{- '<|im_end|>\n' }}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]         {%- endif %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]     {%- endif %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712] {%- endfor %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712] {%- if add_generation_prompt %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]     {{- '<|im_start|>assistant\n' }}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]     {%- if enable_thinking is defined and enable_thinking is false %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]         {{- '<think>\n\n</think>\n\n' }}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712]     {%- endif %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712] {%- endif %}
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [api_server.py:1712] It is different from official chat template 'Qwen/Qwen3-8B'. This discrepancy may lead to performance degradation.
+[1;36m(APIServer pid=806)[0;0m WARNING 10-26 20:54:25 [__init__.py:1695] Default sampling parameters have been overridden by the model's Hugging Face generation config recommended from the model creator. If this is not intended, please relaunch vLLM instance with `--generation-config vllm`.
+[1;36m(APIServer pid=806)[0;0m INFO 10-26 20:54:25 [serving_responses.py:130] Using default chat sampling params from model: {'temperature': 0.6, 'top_k': 20, 'top_p': 0.95}
+[1;36m(APIServer pid=806)[0;0m INFO 10-26 20:54:25 [serving_responses.py:159] "auto" tool choice has been enabled please note that while the parallel_tool_calls client option is preset for compatibility reasons, it will be ignored.
+[1;36m(APIServer pid=806)[0;0m INFO 10-26 20:54:25 [serving_chat.py:97] "auto" tool choice has been enabled please note that while the parallel_tool_calls client option is preset for compatibility reasons, it will be ignored.
+[1;36m(APIServer pid=806)[0;0m INFO 10-26 20:54:25 [serving_chat.py:137] Using default chat sampling params from model: {'temperature': 0.6, 'top_k': 20, 'top_p': 0.95}
+[1;36m(APIServer pid=806)[0;0m INFO 10-26 20:54:25 [serving_completion.py:76] Using default completion sampling params from model: {'temperature': 0.6, 'top_k': 20, 'top_p': 0.95}
+[1;36m(APIServer pid=806)[0;0m INFO 10-26 20:54:25 [api_server.py:1971] Starting vLLM API server 0 on http://127.0.0.1:8000
+[1;36m(APIServer pid=806)[0;0m INFO 10-26 20:54:25 [launcher.py:36] Available routes are:
+[1;36m(APIServer pid=806)[0;0m INFO 10-26 20:54:25 [launcher.py:44] Route: /openapi.json, Methods: HEAD, GET
+[1;36m(APIServer pid=806)[0;0m INFO 10-26 20:54:25 [launcher.py:44] Route: /docs, Methods: HEAD, GET
+[1;36m(APIServer pid=806)[0;0m INFO 10-26 20:54:25 [launcher.py:44] Route: /docs/oauth2-redirect, Methods: HEAD, GET
+[1;36m(APIServer pid=806)[0;0m INFO 10-26 20:54:25 [launcher.py:44] Route: /redoc, Methods: HEAD, GET
+[1;36m(APIServer pid=806)[0;0m INFO 10-26 20:54:25 [launcher.py:44] Route: /metrics, Methods: GET
+[1;36m(APIServer pid=806)[0;0m INFO:     Started server process [806]
+[1;36m(APIServer pid=806)[0;0m INFO:     Waiting for application startup.
+[1;36m(APIServer pid=806)[0;0m INFO:     Application startup complete.
+[1;36m(APIServer pid=806)[0;0m INFO:     127.0.0.1:37694 - "GET /v1/models HTTP/1.1" 200 OK
+[1;36m(APIServer pid=806)[0;0m INFO 10-26 20:54:45 [chat_utils.py:538] Detected the chat template content format to be 'string'. You can set `--chat-template-content-format` to override this.
+[1;36m(EngineCore_DP0 pid=1185)[0;0m WARNING 10-26 20:54:45 [cudagraph_dispatcher.py:102] cudagraph dispatching keys are not initialized. No cudagraph will be used.
+[1;36m(APIServer pid=806)[0;0m INFO:     127.0.0.1:51278 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=806)[0;0m INFO 10-26 20:54:55 [loggers.py:123] Engine 000: Avg prompt throughput: 15.6 tokens/s, Avg generation throughput: 1.9 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+[1;36m(APIServer pid=806)[0;0m INFO 10-26 20:55:05 [loggers.py:123] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+[1;36m(APIServer pid=806)[0;0m INFO:     127.0.0.1:55070 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=806)[0;0m INFO:     127.0.0.1:55070 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=806)[0;0m INFO:     127.0.0.1:55070 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=806)[0;0m INFO:     127.0.0.1:55070 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=806)[0;0m INFO 10-26 20:55:35 [loggers.py:123] Engine 000: Avg prompt throughput: 162.1 tokens/s, Avg generation throughput: 9.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 8.8%, Prefix cache hit rate: 9.5%
+[1;36m(APIServer pid=806)[0;0m INFO:     127.0.0.1:55070 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=806)[0;0m ERROR 10-26 20:55:42 [serving_chat.py:251] Error in preprocessing prompt inputs
+[1;36m(APIServer pid=806)[0;0m ERROR 10-26 20:55:42 [serving_chat.py:251] Traceback (most recent call last):
+[1;36m(APIServer pid=806)[0;0m ERROR 10-26 20:55:42 [serving_chat.py:251]   File "/workspace/csi-smoke-20261026/venv/lib/python3.12/site-packages/vllm/entrypoints/openai/serving_chat.py", line 227, in create_chat_completion
+[1;36m(APIServer pid=806)[0;0m ERROR 10-26 20:55:42 [serving_chat.py:251]     ) = await self._preprocess_chat(
+[1;36m(APIServer pid=806)[0;0m ERROR 10-26 20:55:42 [serving_chat.py:251]         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(APIServer pid=806)[0;0m ERROR 10-26 20:55:42 [serving_chat.py:251]   File "/workspace/csi-smoke-20261026/venv/lib/python3.12/site-packages/vllm/entrypoints/openai/serving_engine.py", line 826, in _preprocess_chat
+[1;36m(APIServer pid=806)[0;0m ERROR 10-26 20:55:42 [serving_chat.py:251]     prompt_inputs = await self._tokenize_prompt_input_async(
+[1;36m(APIServer pid=806)[0;0m ERROR 10-26 20:55:42 [serving_chat.py:251]                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(APIServer pid=806)[0;0m ERROR 10-26 20:55:42 [serving_chat.py:251]   File "/workspace/csi-smoke-20261026/venv/lib/python3.12/site-packages/vllm/entrypoints/openai/serving_engine.py", line 704, in _tokenize_prompt_input_async
+[1;36m(APIServer pid=806)[0;0m ERROR 10-26 20:55:42 [serving_chat.py:251]     async for result in self._tokenize_prompt_inputs_async(
+[1;36m(APIServer pid=806)[0;0m ERROR 10-26 20:55:42 [serving_chat.py:251]   File "/workspace/csi-smoke-20261026/venv/lib/python3.12/site-packages/vllm/entrypoints/openai/serving_engine.py", line 727, in _tokenize_prompt_inputs_async
+[1;36m(APIServer pid=806)[0;0m ERROR 10-26 20:55:42 [serving_chat.py:251]     yield await self._normalize_prompt_text_to_input(
+[1;36m(APIServer pid=806)[0;0m ERROR 10-26 20:55:42 [serving_chat.py:251]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(APIServer pid=806)[0;0m ERROR 10-26 20:55:42 [serving_chat.py:251]   File "/workspace/csi-smoke-20261026/venv/lib/python3.12/site-packages/vllm/entrypoints/openai/serving_engine.py", line 592, in _normalize_prompt_text_to_input
+[1;36m(APIServer pid=806)[0;0m ERROR 10-26 20:55:42 [serving_chat.py:251]     return self._validate_input(request, input_ids, input_text)
+[1;36m(APIServer pid=806)[0;0m ERROR 10-26 20:55:42 [serving_chat.py:251]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(APIServer pid=806)[0;0m ERROR 10-26 20:55:42 [serving_chat.py:251]   File "/workspace/csi-smoke-20261026/venv/lib/python3.12/site-packages/vllm/entrypoints/openai/serving_engine.py", line 675, in _validate_input
+[1;36m(APIServer pid=806)[0;0m ERROR 10-26 20:55:42 [serving_chat.py:251]     raise ValueError(
+[1;36m(APIServer pid=806)[0;0m ERROR 10-26 20:55:42 [serving_chat.py:251] ValueError: This model's maximum context length is 32768 tokens. However, your request has 43654 input tokens. Please reduce the length of the input messages.
+[1;36m(APIServer pid=806)[0;0m INFO:     127.0.0.1:55070 - "POST /v1/chat/completions HTTP/1.1" 400 Bad Request
+[1;36m(APIServer pid=806)[0;0m INFO 10-26 20:55:45 [loggers.py:123] Engine 000: Avg prompt throughput: 4424.3 tokens/s, Avg generation throughput: 4.8 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 35.9%
+[1;36m(APIServer pid=806)[0;0m INFO 10-26 20:55:55 [loggers.py:123] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 35.9%
+[1;36m(APIServer pid=806)[0;0m INFO:     127.0.0.1:37572 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=806)[0;0m INFO:     127.0.0.1:37572 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=806)[0;0m INFO:     127.0.0.1:37572 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=806)[0;0m INFO:     127.0.0.1:37572 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=806)[0;0m INFO 10-26 20:57:55 [loggers.py:123] Engine 000: Avg prompt throughput: 1597.0 tokens/s, Avg generation throughput: 8.2 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 17.2%, Prefix cache hit rate: 36.1%
+[1;36m(APIServer pid=806)[0;0m INFO 10-26 20:58:05 [loggers.py:123] Engine 000: Avg prompt throughput: 2941.5 tokens/s, Avg generation throughput: 23.8 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 20.3%, Prefix cache hit rate: 36.1%
+[1;36m(APIServer pid=806)[0;0m INFO 10-26 20:58:15 [loggers.py:123] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 26.2 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 36.1%
+[1;36m(APIServer pid=806)[0;0m INFO:     127.0.0.1:37572 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=806)[0;0m INFO:     127.0.0.1:37572 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+[1;36m(APIServer pid=806)[0;0m INFO 10-26 20:58:25 [loggers.py:123] Engine 000: Avg prompt throughput: 165.8 tokens/s, Avg generation throughput: 13.4 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 36.4%
+[1;36m(APIServer pid=806)[0;0m INFO 10-26 20:58:35 [loggers.py:123] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 36.4%

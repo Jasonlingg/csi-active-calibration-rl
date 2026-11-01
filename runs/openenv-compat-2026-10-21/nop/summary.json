@@ -1,0 +1,20 @@
+{
+  "agent": "nop",
+  "task": "/private/tmp/csi-openenv-check.8cpta14g/task-eval-F",
+  "trial": "/private/tmp/csi-openenv-check.8cpta14g/nop/trials/csi-openenv-check-task-eval-F-3b47104e",
+  "report": {
+    "reward": -1.0,
+    "valid": false,
+    "reason": "invalid history or replay: ValueError: history must contain exactly 16 actions",
+    "queries": 0
+  },
+  "reward_preserved": true,
+  "private_sidecar_artifact_collected": true,
+  "journal_sha256": "fe4a98659256605ed167bc8efbe73d13bf4de5eec6117a85733f52e4142eb4fc",
+  "queries": 0,
+  "model_calls": 0,
+  "session_cleaned_up": true,
+  "openenv_ok": false,
+  "expected_capture_rejection": "[FATAL] no_turns: the intercept saw no model calls: the agent never reached it (wrong base URL, unresolved model, or auth rejected)",
+  "scope": "Harbor lifecycle and reward check; no LLM capture or training validated"
+}

@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "csi-label-selection"
+version = "0.1.0"
+description = "CSI active label selection as a Verifiers Harbor taskset"
+readme = "README.md"
+requires-python = ">=3.12,<3.15"
+dependencies = [
+    "verifiers[harbor] @ git+https://github.com/PrimeIntellect-ai/verifiers.git@c4e2f24a9ae0434ab55f5627c9086633b9391ad6",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<9.1"]
+
+[project.scripts]
+csi-label-check = "csi_label_selection.check:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

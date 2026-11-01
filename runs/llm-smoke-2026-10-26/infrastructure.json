@@ -1,0 +1,13 @@
+{
+  "original_pods": {
+    "88hamsser2yvzu": "start refused: host GPU capacity",
+    "ef3mj33ilxbquj": "start refused: host GPU capacity",
+    "hvlssbkhwovar8": "container failed: GPU requires reset; returned to EXITED"
+  },
+  "temporary_pod": "luleoifj03tqto",
+  "gpu": "NVIDIA A40",
+  "hourly_rate": 0.59,
+  "created_at": "2026-10-26T20:50:55Z",
+  "datacenter": "EU-SE-1",
+  "scope": "one LLM inference episode; no training or publishing"
+}

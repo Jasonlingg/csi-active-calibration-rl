@@ -1,0 +1,79 @@
+{
+  "request": {
+    "model": "Qwen/Qwen3-8B",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Call the ping tool with value hello."
+      }
+    ],
+    "tools": [
+      {
+        "type": "function",
+        "function": {
+          "name": "ping",
+          "description": "Return a supplied value.",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      }
+    ],
+    "tool_choice": "auto",
+    "temperature": 0,
+    "max_tokens": 128
+  },
+  "response": {
+    "id": "chatcmpl-918c87a6825c47329ae2189d8d907658",
+    "object": "chat.completion",
+    "created": 1793048085,
+    "model": "Qwen/Qwen3-8B",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": null,
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [
+            {
+              "id": "chatcmpl-tool-17710a0b42fe46a7a965a21e70f12d72",
+              "type": "function",
+              "function": {
+                "name": "ping",
+                "arguments": "{\"value\": \"hello\"}"
+              }
+            }
+          ],
+          "reasoning_content": null
+        },
+        "logprobs": null,
+        "finish_reason": "tool_calls",
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 156,
+      "total_tokens": 175,
+      "completion_tokens": 19,
+      "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "kv_transfer_params": null
+  }
+}

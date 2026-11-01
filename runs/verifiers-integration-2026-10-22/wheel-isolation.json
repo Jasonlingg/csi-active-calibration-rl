@@ -1,0 +1,27 @@
+{
+  "main_csi_package_installed": false,
+  "same_docker_host_only": true,
+  "splits": {
+    "train": [
+      "csi-train-A-seed0",
+      "csi-train-B-seed0",
+      "csi-train-C-seed0",
+      "csi-train-D-seed0",
+      "csi-train-E-seed0"
+    ],
+    "eval": [
+      "csi-eval-A-seed0",
+      "csi-eval-B-seed0",
+      "csi-eval-C-seed0",
+      "csi-eval-D-seed0",
+      "csi-eval-E-seed0",
+      "csi-eval-F-seed0",
+      "csi-eval-G-seed0"
+    ]
+  },
+  "versions": {
+    "csi-label-selection": "0.1.0",
+    "verifiers": "0.4.1.dev68",
+    "harbor": "0.24.0"
+  }
+}

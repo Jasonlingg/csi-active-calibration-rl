@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "study_id": "2026-10-21-seed-study-v1",
+  "status": "superseded_not_started",
+  "question": "How sensitive is the existing learned label-selection policy to its training seed, and how does it compare with fixed baselines on development events?",
+  "execution": {
+    "python": "/private/tmp/csi-active-calibration-rl-venv/bin/python",
+    "device": "cpu",
+    "torch_threads": 1,
+    "run_sequentially": true,
+    "output_root": "runs/2026-10-21-seed-study-v1",
+    "output_policy": "Require a fresh study directory; preserve every existing experiment and result.",
+    "authorization": "Do not execute this study. The user clarified that the goal is LLM RL fine-tuning, not training the small numerical policy. No runs were started."
+  },
+  "training": {
+    "module": "active_calibration.train",
+    "algorithm": "terminal-return actor-critic REINFORCE",
+    "split": "train",
+    "receivers": ["A", "B", "C", "D", "E"],
+    "query_repetition": 20,
+    "reward_repetition": 21,
+    "seeds": [1, 2, 3, 4, 5],
+    "episodes_per_seed": 400,
+    "budget": 16,
+    "hidden_dim": 64,
+    "learning_rate": 0.0003,
+    "batch_episodes": 8,
+    "entropy_coefficient": 0.005,
+    "value_coefficient": 0.5,
+    "log_every": 50,
+    "checkpoint_rule": "Use the final checkpoint at episode 400 for every seed. No evaluation-based selection, tuning, early stopping, or seed exclusion. Record failures explicitly."
+  },
+  "classifier": {
+    "algorithm": "weighted RBF kernel ridge",
+    "gamma": 0.25,
+    "ridge": 0.05,
+    "target_weight": 8.0,
+    "agent_controls": "Label requests only; classifier algorithm and settings remain fixed."
+  },
+  "evaluation": {
+    "module": "active_calibration.evaluate",
+    "split": "eval",
+    "receivers": ["A", "B", "C", "D", "E", "F", "G"],
+    "query_repetition": 23,
+    "reward_repetition": 24,
+    "row_shuffle_seeds": [0, 1, 2, 3, 4],
+    "budget": 16,
+    "baselines": ["random", "uncertainty", "diversity"],
+    "policy_action_rule": "Largest masked logit with frozen weights.",
+    "unique_reward_events": 24,
+    "receiver_event_pairs": 168,
+    "interpretation": "Previously inspected development data; not an untouched prospective holdout."
+  },
+  "analysis": {
+    "primary": "For each training seed, average the paired RL-minus-uncertainty final-accuracy difference over all seven receivers and five row-shuffle seeds; report all five values and their mean, descriptive standard deviation, minimum, and maximum.",
+    "secondary": [
+      "Report final accuracy and accuracy gain for every policy and training seed.",
+      "Report paired differences against random and diversity selection.",
+      "Report per-receiver results and the F/G subgroup, which is excluded from policy training.",
+      "Plot training returns in fixed blocks of 50 episodes; these are training feedback, not generalization evidence."
+    ],
+    "dependence": "Training seeds measure optimization variation. Row shuffles and synchronized receiver views reuse physical recordings. Repeated baseline results across checkpoints must not be counted as independent observations. Do not present episode counts as independent sample sizes or claim new-room/person transfer.",
+    "historical_seed0": "Keep the original seed-0 result as historical context; exclude it from the five-run study summary.",
+    "adaptivity": "This seed study alone does not establish that feedback-dependent selection beats a nonadaptive strategy; that requires a separate, specified comparison."
+  },
+  "source_sha256": {
+    "active_calibration/data.py": "7aa8d34ac394047b64249b7c65b55ca67f837b941fd0ec772877e79bbe68219b",
+    "active_calibration/env.py": "fc9ad1c26de62c22ed5df13b67f0018be5efbe6d36a8fb7eef893549a805cef0",
+    "active_calibration/learner.py": "79f4691ff0c27c25bba82354168898e7d72d256878651be277631d22db7632a0",
+    "active_calibration/policy.py": "a0f0a420e4f46e099c731ed37bf3bcb28c266e71138c78c8070d0c3b572c70cc",
+    "active_calibration/train.py": "a3215f1cdb57bc62c383eef44621aa5698244484d0b6189c0970b13468736368",
+    "active_calibration/evaluate.py": "e9b007dbb5e27c350fdb59b5e8201b87211a1b7a5e28ff1b41e304368bb13ed8"
+  }
+}

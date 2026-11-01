@@ -1,0 +1,55 @@
+# One LLM episode. Override model/client with a real endpoint before execution.
+# --dry-run validates this file without model calls or container provisioning.
+model = "local-policy"
+push = false
+num_rollouts = 1
+max_concurrent = 1
+
+[select]
+limit = 1
+
+[select.include]
+ids = ["csi-train-A-seed0"]
+
+[client]
+type = "eval"
+base_url = "http://127.0.0.1:8000/v1"
+api_key_var = "CSI_LOCAL_MODEL_KEY"
+
+[sampling]
+temperature = 0.0
+max_tokens = 2048
+
+[env.taskset]
+id = "csi-label-selection"
+tasks_dir = "verifiers_tasks/compact/train"
+split = "train"
+
+[env.agent]
+max_turns = 24
+max_input_tokens = 512000
+max_output_tokens = 8192
+max_turn_tokens = 2048
+
+[env.agent.harness]
+id = "bash"
+edit = false
+compaction = "None"
+
+[env.agent.runtime]
+type = "docker"
+
+[env.agent.deployment]
+trust_compose = true
+
+[env.agent.timeout]
+setup = 600
+rollout = 600
+finalize = 120
+scoring = 120
+
+[env.agent.retries]
+max_retries = 0
+
+[env.agent.scoring.retries]
+max_retries = 0

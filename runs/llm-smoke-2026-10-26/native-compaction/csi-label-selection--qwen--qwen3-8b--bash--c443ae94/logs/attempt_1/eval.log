@@ -1,0 +1,9 @@
+16:57:33    INFO running 1x1 rollouts on Qwen/Qwen3-8B
+16:57:33    INFO vf-eval will be deprecated - move to prime-rl's `uv run eval`: it streams traces live into a dashboard, evaluates several envs in one run and scales through env servers. https://github.com/PrimeIntellect-ai/prime-rl
+16:57:33    INFO results: /Users/jasonling/Documents/GitHub/csi-active-calibration-rl/runs/llm-smoke-2026-10-26/native-compaction/csi-label-selection--qwen--qwen3-8b--bash--c443ae94
+16:57:33    INFO rollout start: id=b8659fc9467949a1a8939156cdc85336 task=0 harness=bash runtime=docker
+16:57:33    INFO interception up: url=http://127.0.0.1:62360
+16:57:33    INFO interception pool: 1 server(s), multiplex=32
+16:58:23    INFO docker: started container vf-f7b535f244c2452c8273bc4a15aabf44 (image=sha256:a0c590f6f266f3ff04f54c6cdd00c0ba260f1f4baea1666ea564d8dca748e774)
+16:58:24    INFO rollout done: id=b8659fc9467949a1a8939156cdc85336 task=0 reward=-1.000 turns=6 stop=agent_completed
+16:58:24    INFO interception down: url=http://127.0.0.1:62360

@@ -1,0 +1,21 @@
+{
+  "status": "prepared; not executed; new model-trial authorization required",
+  "model": "Qwen/Qwen3-8B",
+  "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "chat_template": "runs/llm-smoke-2026-10-26/nonthinking.jinja",
+  "server_reference": "runs/llm-smoke-2026-10-26/server-command.json",
+  "episode": "csi-train-A-seed0",
+  "rollouts": 1,
+  "training": false,
+  "proposed_resource_limit": {
+    "new_spend_usd": 1.0,
+    "maximum_gpu_wall_minutes": 20,
+    "cleanup": "terminate temporary GPU and close SSH tunnel"
+  },
+  "acceptance": [
+    "16 distinct accepted queries",
+    "separate verifier valid=true",
+    "independent journal replay matches",
+    "report model calls, context use, and elapsed compute"
+  ]
+}

@@ -1,0 +1,10 @@
+16:55:15    INFO running 1x1 rollouts on Qwen/Qwen3-8B
+16:55:15    INFO vf-eval will be deprecated - move to prime-rl's `uv run eval`: it streams traces live into a dashboard, evaluates several envs in one run and scales through env servers. https://github.com/PrimeIntellect-ai/prime-rl
+16:55:15    INFO results: /Users/jasonling/Documents/GitHub/csi-active-calibration-rl/runs/llm-smoke-2026-10-26/native/csi-label-selection--qwen--qwen3-8b--bash--362bc83a
+16:55:15    INFO rollout start: id=cb9eb85db1e54e2baf6a6686a21a3af6 task=0 harness=bash runtime=docker
+16:55:15    INFO interception up: url=http://127.0.0.1:62200
+16:55:15    INFO interception pool: 1 server(s), multiplex=32
+16:55:42 WARNING model call failed: id=cb9eb85db1e54e2baf6a6686a21a3af6 ProviderError: upstream 400: {"error":{"message":"This model's maximum context length is 32768 tokens. However, your request has 43654 input tokens. Please reduce the length of the input messages. None","type":"BadRequestError","param":null,"code":400}}
+16:55:45    INFO docker: started container vf-6f34e644c34f4901a05178c913049ce9 (image=sha256:a0c590f6f266f3ff04f54c6cdd00c0ba260f1f4baea1666ea564d8dca748e774)
+16:55:46    INFO rollout done: id=cb9eb85db1e54e2baf6a6686a21a3af6 task=0 reward=-1.000 turns=5 stop=agent_completed
+16:55:46    INFO interception down: url=http://127.0.0.1:62200

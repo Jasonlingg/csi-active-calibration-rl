@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "split": "train",
+  "tasks": [
+    {
+      "path": "tasks/csi-train-A-seed0",
+      "manifest_sha256": "6b38edbc8b379828da70fd749473cdabe07faf8705bf199a25dcd123b1c4fda0"
+    },
+    {
+      "path": "tasks/csi-train-B-seed0",
+      "manifest_sha256": "b24fb5eac444c1bb25f3f5f74a396509795080c97ba1391b86dbeb0c3171a08f"
+    },
+    {
+      "path": "tasks/csi-train-C-seed0",
+      "manifest_sha256": "3e87c1a48457c9ea476278a2699922dc872173e59169138de95dbefec078bc3c"
+    },
+    {
+      "path": "tasks/csi-train-D-seed0",
+      "manifest_sha256": "a0b8fd1ebd7b377ace3b7d61132dcb562d687974c2e99b41fc147bc261ca74bf"
+    },
+    {
+      "path": "tasks/csi-train-E-seed0",
+      "manifest_sha256": "7df04103ce141c748342ec3e381b117f5746197437ebae09e47c9d47d16cd7fe"
+    }
+  ],
+  "verifiers_revision": "c4e2f24a9ae0434ab55f5627c9086633b9391ad6",
+  "scope": "Local Docker integration; images have not been published"
+}

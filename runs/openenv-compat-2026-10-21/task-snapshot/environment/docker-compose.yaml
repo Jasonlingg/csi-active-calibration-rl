@@ -1,0 +1,21 @@
+services:
+  main:
+    depends_on:
+      calibration:
+        condition: service_healthy
+    environment:
+      CSI_CALIBRATION_URL: http://calibration:8080
+  calibration:
+    build:
+      context: ./calibration
+    expose:
+      - "8080"
+    tmpfs:
+      - /tmp:size=16m
+    cpus: 1
+    mem_limit: 512m
+    healthcheck:
+      test: ["CMD", "python3", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8080/health', timeout=2).read()"]
+      interval: 2s
+      timeout: 3s
+      retries: 30

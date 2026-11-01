@@ -1,0 +1,36 @@
+{
+  "standalone_project": "/Users/jasonling/Documents/GitHub/csi-active-calibration-rl",
+  "original_experiment_preserved": "/Users/jasonling/Documents/GitHub/terminal-bench/experiments/csi-active-calibration-rl",
+  "local_fixture_sha256_matches_original": {
+    "calibration_event_index.csv": "24e36f333bb6c28aed0531b48d240b43ac2bb3cc65f18d6766317948a00c8d49",
+    "source.npz": "0e510d97edbee36a75f5c3231f6108275822aab152d5ac2208b33a8bfa4b7b14",
+    "target_calib_A.npz": "575c10f5e227c533ae398607564444f01e93c153bcc8cfc36e329e5058821634",
+    "target_calib_B.npz": "8bdcbf7434848957282bf21a9649d576921fec0e0b2af38fb7229c931f9b792c",
+    "target_calib_C.npz": "a218d66d9db6d6a7f17ec3d0a4cf1d44182a126e33aab2f93f8f2994f667aeb5",
+    "target_calib_D.npz": "9f46127951f709591815b53b03e3ec4fc1001395500ce40906737fc1509911d9",
+    "target_calib_E.npz": "48a8f8f6085092fa21d9a86d33e8fd080e3a43d2a2e754bcaa7e530997964d85",
+    "target_calib_F.npz": "9656b341f4eb04ef1ebd8447d02b23a6f0f96f73fc902dcd20bb95ab6e190dd0",
+    "target_calib_G.npz": "f2014c2aced3363aa39e415a9e62a4f8d7a27243681cd6f55cdf4917f69f6594"
+  },
+  "evaluation_summary_identical": true,
+  "all_query_traces_labels_rewards_identical": true,
+  "tests_passed": 23,
+  "demo_from_unrelated_working_directory_passed": true,
+  "new_policy_training_runs": 0,
+  "published_or_submitted": false,
+  "source_sha256": {
+    "active_calibration/__init__.py": "27a4a691de936e9663004709c73160ef5f79f0dbb29d165e5e254e9ca8cc4d48",
+    "active_calibration/data.py": "7aa8d34ac394047b64249b7c65b55ca67f837b941fd0ec772877e79bbe68219b",
+    "active_calibration/demo.py": "257f46472f0a9238626bffaff53ce6fb846f8d12826574b738d0f54308290502",
+    "active_calibration/env.py": "fc9ad1c26de62c22ed5df13b67f0018be5efbe6d36a8fb7eef893549a805cef0",
+    "active_calibration/evaluate.py": "e9b007dbb5e27c350fdb59b5e8201b87211a1b7a5e28ff1b41e304368bb13ed8",
+    "active_calibration/learner.py": "79f4691ff0c27c25bba82354168898e7d72d256878651be277631d22db7632a0",
+    "active_calibration/policy.py": "a0f0a420e4f46e099c731ed37bf3bcb28c266e71138c78c8070d0c3b572c70cc",
+    "active_calibration/train.py": "a3215f1cdb57bc62c383eef44621aa5698244484d0b6189c0970b13468736368",
+    "tests/conftest.py": "13c38e498f78abad713fd17db4e6f610bb717134befa9009ed310b6927955e1e",
+    "tests/test_data.py": "7468d1bf2bcc20eebd17d9fa074d95fae4409974f0dd9a189160b03fea09e7b1",
+    "tests/test_env.py": "a5cab04cd170f647761804193869e90359c2414259fdf1e78ff9d60b2d3e6914",
+    "tests/test_learner.py": "ff072e970108f11616063300489a8c895be9970ae92b62d15ef248f236f30d91",
+    "tests/test_policy.py": "c9a0b454476fb91834553e500654ea84ffc5b64ae54aad6e5c5370243821ce68"
+  }
+}

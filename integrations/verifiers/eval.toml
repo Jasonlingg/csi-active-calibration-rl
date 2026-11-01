@@ -1,0 +1,23 @@
+# Configuration validation is model-free. Running this without --dry-run needs a model server.
+model = "local-policy"
+push = false
+max_concurrent = 1
+
+[client]
+type = "eval"
+base_url = "http://127.0.0.1:8000/v1"
+api_key_var = "CSI_LOCAL_MODEL_KEY"
+
+[env.taskset]
+id = "csi-label-selection"
+tasks_dir = "verifiers_tasks/eval"
+split = "eval"
+
+[env.agent.harness]
+id = "bash"
+
+[env.agent.runtime]
+type = "docker"
+
+[env.agent.deployment]
+trust_compose = true
